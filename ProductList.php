@@ -27,11 +27,12 @@ $product_details = $obj->products;
     <?php if(!empty($product_details)) {
 
         foreach($product_details as $product_dt) { ?>
-            <div class="col-sm-3">
+            <div class="col-sm-3 mb-3">
                 <div class="card" style="width: 18rem;">
                     <img src="<?= $product_dt->thumbnail?>" class="card-img-top" alt="product image">
                     <div class="card-body">
-                        <h4 class="card-title"><?= $product_dt->id ?> <?= $product_dt->title ?></h4>
+                        <h3 class="card-title">#<?= $product_dt->id ?></h3>
+                        <h4 class="card-title"> <?= $product_dt->title ?></h4>
                         <h5 class="card-title"><?= '$ '. $product_dt->price ?></h5>
                         <p class="card-text"><?=  $product_dt->description ?></p>
                     </div>
